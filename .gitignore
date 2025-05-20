@@ -178,4 +178,4 @@ data/*
 go_online.sh
 reports/*.csv
 saved/*.pth
-*.sh
+*.sh.env

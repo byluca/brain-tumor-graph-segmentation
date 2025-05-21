@@ -1,0 +1,381 @@
+{
+  "subject_id": "BraTS-GLI-01166-000",
+  "node_explanations": [
+    {
+      "node_id": 974,
+      "llm_explanation_text": "**Valutazione sintetica della predizione del GNN**\n\nLa predizione del modello GNN principale per il supervoxel ID 974 è classificata con una classe \"Non-tumore\" con una confidenza di 1,00, il che indica un'alta fiducia nella predizione. Tuttavia, non ci sono elementi che mettono in dubbio la predizione, poiché tutte le classi hanno confidenze molto basse (0,00) tranne per quella \"Non-tumore\", che è stata classificata con una confidenza di 1,00.\n\n**Interpretazione delle feature più importanti**\n\nLe feature più importanti per la spiegazione del metodo GNNExplainer sono:\n\n* Descrizione Feature 13 (Indice: 12): Importanza 49.124, Z-score 4.09\n* Descrizione Feature 14 (Indice: 13): Importanza 46.336, Z-score 3.82\n* Descrizione Feature 12 (Indice: 11): Importanza 27.393, Z-score 2.02\n\nQueste feature sono probabilmente correlate a caratteristiche del tessuto cerebrale o tumorale che sono rilevanti per la classificazione come \"Non-tumore\". Ad esempio, l'intensità T1c (media) potrebbe essere un indicatore della presenza di tessuto cerebrale normale.\n\n**Confronto dei metodi di explainability**\n\nI metodi di explainability presentano alcune differenze significative:\n\n* GNNExplainer e GradCAM concordano nell'identificare le feature più importanti, ma con importanza diversa (GNNExplainer: 13/14; GradCAM: 5/6).\n* IntegratedGradients presenta una differente topologia delle feature importanti.\n* GraphLIME non identifica alcune feature importanti.\n\n**Implicazioni cliniche**\n\nLe implicazioni cliniche di questa analisi sono:\n\n* L'analisi può aiutare un medico a aumentare la fiducia nella predizione del modello GNN, poiché tutte le classi hanno confidenze basse tranne per quella \"Non-tumore\".\n* Le feature importanti possono essere utilizzate per identificare artefatti o caratteristiche cliniche rilevanti.\n* La presenza di feature correlate a tessuto cerebrale normale può suggerire la possibilità di una lesione non tumorale.\n\n**Giudizio complessivo sulla classificazione del supervoxel**\n\nIn base alle informazioni fornite, il supervoxel ID 974 è probabilmente classificato correttamente come \"Non-tumore\". La alta fiducia nella predizione e la presenza di feature importanti correlate a tessuto cerebrale normale supportano questa conclusione. Tuttavia, è importante notare che l'analisi è stata eseguita su un modello GNN e che le implicazioni cliniche dovrebbero essere confermate da una valutazione manuale dei dati.",
+      "context_provided_to_llm": {
+        "node_id": 974,
+        "main_model_prediction": {
+          "predicted_class_name": "Non-tumore",
+          "predicted_class_index": 0,
+          "confidence": 1.0,
+          "all_class_confidences": {
+            "0": 1.0,
+            "1": 2.007408798837669e-25,
+            "2": 6.173988443535556e-26,
+            "3": 1.4577173313114087e-25
+          }
+        },
+        "explainers_summary": [
+          {
+            "method_name": "GNNExplainer",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 12,
+                "feature_description": "Descrizione Feature 13",
+                "importance_score": 49.123558044433594,
+                "z_score": 4.087409594041307
+              },
+              {
+                "feature_index": 13,
+                "feature_description": "Descrizione Feature 14",
+                "importance_score": 46.336456298828125,
+                "z_score": 3.821873005110113
+              },
+              {
+                "feature_index": 11,
+                "feature_description": "Descrizione Feature 12",
+                "importance_score": 27.39318084716797,
+                "z_score": 2.0170832249920836
+              },
+              {
+                "feature_index": 14,
+                "feature_description": "Descrizione Feature 15",
+                "importance_score": 23.93749237060547,
+                "z_score": 1.6878481219241472
+              },
+              {
+                "feature_index": 17,
+                "feature_description": "Descrizione Feature 18",
+                "importance_score": 18.225074768066406,
+                "z_score": 1.1436068192446094
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.72,
+              "execution_time_sec": 2.6086621284484863,
+              "agrees_with_main_prediction": true
+            }
+          },
+          {
+            "method_name": "GradCAM",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 12,
+                "feature_description": "Descrizione Feature 13",
+                "importance_score": 7.542385101318359,
+                "z_score": 3.1573612486486566
+              },
+              {
+                "feature_index": 13,
+                "feature_description": "Descrizione Feature 14",
+                "importance_score": 7.389435291290283,
+                "z_score": 3.07874290290106
+              },
+              {
+                "feature_index": 4,
+                "feature_description": "Descrizione Feature 5",
+                "importance_score": 7.252861022949219,
+                "z_score": 3.00854181506256
+              },
+              {
+                "feature_index": 18,
+                "feature_description": "Descrizione Feature 19",
+                "importance_score": 4.946681976318359,
+                "z_score": 1.8231334669867654
+              },
+              {
+                "feature_index": 17,
+                "feature_description": "Descrizione Feature 18",
+                "importance_score": 4.607396602630615,
+                "z_score": 1.6487360302669074
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.54,
+              "execution_time_sec": 2.4956445693969727,
+              "agrees_with_main_prediction": true
+            }
+          },
+          {
+            "method_name": "GraphLIME",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 33,
+                "feature_description": "Descrizione Feature 34",
+                "importance_score": 3.81304010718328e-13,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 47,
+                "feature_description": "Descrizione Feature 48",
+                "importance_score": 3.5692689038732683e-13,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 6,
+                "feature_description": "Descrizione Feature 7",
+                "importance_score": 3.563542419048743e-13,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 24,
+                "feature_description": "Descrizione Feature 25",
+                "importance_score": 2.760123401536474e-13,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 18,
+                "feature_description": "Descrizione Feature 19",
+                "importance_score": 2.5063187202717385e-13,
+                "z_score": 0.0
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.26,
+              "execution_time_sec": 57.769113302230835,
+              "agrees_with_main_prediction": true
+            }
+          },
+          {
+            "method_name": "IntegratedGradients",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 4,
+                "feature_description": "Descrizione Feature 5",
+                "importance_score": 7.073204040527344,
+                "z_score": 3.7038319160022324
+              },
+              {
+                "feature_index": 12,
+                "feature_description": "Descrizione Feature 13",
+                "importance_score": 5.045116424560547,
+                "z_score": 2.4400045103415344
+              },
+              {
+                "feature_index": 13,
+                "feature_description": "Descrizione Feature 14",
+                "importance_score": 4.754977226257324,
+                "z_score": 2.2592007485192247
+              },
+              {
+                "feature_index": 2,
+                "feature_description": "Descrizione Feature 3",
+                "importance_score": 4.4554667472839355,
+                "z_score": 2.0725571594410064
+              },
+              {
+                "feature_index": 3,
+                "feature_description": "Descrizione Feature 4",
+                "importance_score": 4.372718334197998,
+                "z_score": 2.020991481799862
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.62,
+              "execution_time_sec": 48.84475040435791,
+              "agrees_with_main_prediction": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node_id": 2427,
+      "llm_explanation_text": "**Valutazione della Predizione del GNN**\n\nLa predizione del modello GNN principale per il supervoxel ID 2427 è \"Non-tumore\" con confidenza pari a 1.00. Ciò suggerisce che il modello ha una certezza totale sulla classificazione di questo supervoxel come non tumorale.\n\nTuttavia, è importante notare che la sola confidenza non è un indicatore sufficiente per valutare l'affidabilità della predizione. La comparazione con i risultati dei metodi di explainability può aiutare a comprendere meglio le ragioni alla base della classificazione.\n\n**Interpretazione delle Feature più Importanti**\n\nLe feature più importanti per la spiegazione del metodo GNNExplainer sono:\n\n* Descrizione Feature 13 (Indice: 12): Importanza 90.366, Z-score 3.84\n* Descrizione Feature 14 (Indice: 13): Importanza 86.343, Z-score 3.64\n* Descrizione Feature 12 (Indice: 11): Importanza 50.288, Z-score 1.85\n\nQueste feature sono associate al supervoxel ID 2427 e possono essere interpretate come segni di una tissue non tumorale. Ad esempio, la presenza di una intensità elevata della Descrizione Feature 13 (Indice: 12) potrebbe indicare la presenza di tessuto cerebrale normale.\n\nTuttavia, è importante notare che le interpretazioni delle feature più importanti possono variare a seconda del contesto specifico e della conoscenza del radiologo.\n\n**Confronto dei Metodi di Explainability**\n\nI metodi di explainability presentati sono GNNExplainer, GradCAM, GraphLIME, IntegratedGradients. I risultati mostrano alcune differenze tra i metodi:\n\n* GNNExplainer e GradCAM concordano sulla classe predetta (Non-tumore) con confidenza pari a 1.00.\n* GraphLIME e IntegratedGradients presentano alcune feature più importanti che non sono state identificate dagli altri metodi.\n* La fedeltà e la sparsità dei metodi sono simili, ma il tempo di esecuzione è più lungo per GraphLIME.\n\n**Implicazioni Cliniche**\n\nLa classificazione del supervoxel ID 2427 come \"Non-tumore\" con confidenza pari a 1.00 ha implicazioni cliniche importanti:\n\n* Un aumento della fiducia nel modello GNN per la segmentazione di tumori cerebrali.\n* La possibilità di identificare artefatti o errori nella predizione.\n* La possibilità di suggerire particolari tipi di tessuto tumorale o non tumorale.\n\nTuttavia, è importante notare che la classificazione non è definitiva e dovrebbe essere confermata da un medico specializzato.\n\n**Giudizio Complessivo sulla Classificazione**\n\nConsiderando tutti i dati, il supervoxel ID 2427 viene classificato come \"Non-tumore\" con confidenza pari a 1.00. La spiegazione fornita dai metodi di explainability supporta la classe predetta e suggerisce che il modello GNN è affidabile per la segmentazione di tumori cerebrali.\n\nTuttavia, è importante notare che la classificazione non è definitiva e dovrebbe essere confermata da un medico specializzato. La comparazione con i risultati dei metodi di explainability può aiutare a comprendere meglio le ragioni alla base della classificazione e a identificare potenziali artefatti o errori.",
+      "context_provided_to_llm": {
+        "node_id": 2427,
+        "main_model_prediction": {
+          "predicted_class_name": "Non-tumore",
+          "predicted_class_index": 0,
+          "confidence": 1.0,
+          "all_class_confidences": {
+            "0": 1.0,
+            "1": 1.4500743109755232e-33,
+            "2": 6.703597977605219e-24,
+            "3": 9.423427763875378e-29
+          }
+        },
+        "explainers_summary": [
+          {
+            "method_name": "GNNExplainer",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 12,
+                "feature_description": "Descrizione Feature 13",
+                "importance_score": 90.36616516113281,
+                "z_score": 3.8421337665625597
+              },
+              {
+                "feature_index": 13,
+                "feature_description": "Descrizione Feature 14",
+                "importance_score": 86.34342956542969,
+                "z_score": 3.642243063053569
+              },
+              {
+                "feature_index": 11,
+                "feature_description": "Descrizione Feature 12",
+                "importance_score": 50.28750991821289,
+                "z_score": 1.850615705877974
+              },
+              {
+                "feature_index": 14,
+                "feature_description": "Descrizione Feature 15",
+                "importance_score": 39.88042068481445,
+                "z_score": 1.3334849278653953
+              },
+              {
+                "feature_index": 10,
+                "feature_description": "Descrizione Feature 11",
+                "importance_score": 39.29318618774414,
+                "z_score": 1.3043051038497393
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.6599999999999999,
+              "execution_time_sec": 2.362855911254883,
+              "agrees_with_main_prediction": true
+            }
+          },
+          {
+            "method_name": "GradCAM",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 2,
+                "feature_description": "Descrizione Feature 3",
+                "importance_score": 30.3723087310791,
+                "z_score": 3.894393160102068
+              },
+              {
+                "feature_index": 3,
+                "feature_description": "Descrizione Feature 4",
+                "importance_score": 28.41535758972168,
+                "z_score": 3.6039369275161626
+              },
+              {
+                "feature_index": 12,
+                "feature_description": "Descrizione Feature 13",
+                "importance_score": 14.293999671936035,
+                "z_score": 1.5080049785191634
+              },
+              {
+                "feature_index": 13,
+                "feature_description": "Descrizione Feature 14",
+                "importance_score": 13.974444389343262,
+                "z_score": 1.4605756781532688
+              },
+              {
+                "feature_index": 1,
+                "feature_description": "Descrizione Feature 2",
+                "importance_score": 13.775634765625,
+                "z_score": 1.4310677905588074
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.6599999999999999,
+              "execution_time_sec": 2.4052817821502686,
+              "agrees_with_main_prediction": true
+            }
+          },
+          {
+            "method_name": "GraphLIME",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 19,
+                "feature_description": "Descrizione Feature 20",
+                "importance_score": 2.08975850513049e-10,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 4,
+                "feature_description": "Descrizione Feature 5",
+                "importance_score": 2.006707577884015e-10,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 23,
+                "feature_description": "Descrizione Feature 24",
+                "importance_score": 1.719592385152069e-10,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 12,
+                "feature_description": "Descrizione Feature 13",
+                "importance_score": 1.302427193872191e-10,
+                "z_score": 0.0
+              },
+              {
+                "feature_index": 42,
+                "feature_description": "Descrizione Feature 43",
+                "importance_score": 1.1592276444316596e-10,
+                "z_score": 0.0
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.52,
+              "execution_time_sec": 55.867268323898315,
+              "agrees_with_main_prediction": true
+            }
+          },
+          {
+            "method_name": "IntegratedGradients",
+            "target_class_for_explanation": "Non-tumore",
+            "top_features": [
+              {
+                "feature_index": 4,
+                "feature_description": "Descrizione Feature 5",
+                "importance_score": 8.581050872802734,
+                "z_score": 3.5697192534578814
+              },
+              {
+                "feature_index": 0,
+                "feature_description": "Descrizione Feature 1",
+                "importance_score": 6.3748955726623535,
+                "z_score": 2.4787173236903826
+              },
+              {
+                "feature_index": 12,
+                "feature_description": "Descrizione Feature 13",
+                "importance_score": 6.059215545654297,
+                "z_score": 2.32260523192924
+              },
+              {
+                "feature_index": 13,
+                "feature_description": "Descrizione Feature 14",
+                "importance_score": 5.868523597717285,
+                "z_score": 2.228303038798428
+              },
+              {
+                "feature_index": 17,
+                "feature_description": "Descrizione Feature 18",
+                "importance_score": 4.238162517547607,
+                "z_score": 1.4220465234163242
+              }
+            ],
+            "metrics": {
+              "fidelity": 0.0,
+              "sparsity": 0.7,
+              "execution_time_sec": 47.12607145309448,
+              "agrees_with_main_prediction": true
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

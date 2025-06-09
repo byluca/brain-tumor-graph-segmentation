@@ -159,11 +159,33 @@ To replicate the findings of this project, follow the steps below.
 
 ### Running the Code
 
-The main workflows are managed through the Jupyter Notebooks in the `notebooks/` folder. It is recommended to open and run them in order to replicate the entire process:
+The entire workflow is organized into a series of Jupyter Notebooks located in the `notebooks/` folder. To replicate the project, please run them in the following order.
 
-1.  **Data Preprocessing and Graph Construction**: Open `1_Data_Preprocessing_and_Graph_Construction.ipynb` to process the MRI data and generate the graph files.
-2.  **GNN Model Training**: Use `2_GNN_Model_Training.ipynb` to train the different GNN architectures (GAT, GraphSAGE, ChebNet).
-3.  **Evaluation and Explainability**: Run `3_XAI_and_Evaluation.ipynb` to evaluate the best model, generate explainability analyses, and create the narrative reports.
+#### 1. `1-data-exploration.ipynb`
+This notebook provides an initial exploration of the BraTS 2023 dataset.
+- Visualizes the different MRI modalities (T1, T1ce, T2, FLAIR).
+- Displays the ground-truth segmentation masks.
+- Helps build an understanding of the data before processing.
+
+#### 2. `2-pre-processing.ipynb`
+This notebook handles all the necessary steps to prepare the data for the GNN.
+- Performs standard preprocessing like skull-stripping and intensity normalization.
+- Converts the 3D MRI volumes into graph structures using the SLIC super-voxel method.
+- **Output**: Saves the processed graph files to the `data/graphs/` directory.
+
+#### 3. `3-training.ipynb`
+This notebook covers the training and validation of the GNN models.
+- Loads the graph data created in the previous step.
+- Trains the three GNN architectures: GAT, GraphSAGE, and ChebNet.
+- Logs training metrics (e.g., loss, Dice score).
+- **Output**: Saves the best-trained model weights to the `saved/models/` directory.
+
+#### 4. `4-explainability.ipynb`
+The final notebook focuses on model evaluation and generating explainable insights.
+- Loads a pre-trained model from `saved/models/`.
+- Evaluates its performance on the test set.
+- Applies XAI methods (Integrated Gradients, GNNExplainer) to a sample prediction.
+- Generates and displays the final narrative report using a Large Language Model (LLM).
 
 ---
 

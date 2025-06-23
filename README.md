@@ -208,8 +208,8 @@ If you use this code or its results in your research, please cite the original t
 ## Author
 
 **Gianluca Lascaro**
--   GitHub: `[your-github-profile-url]`
--   LinkedIn: `[your-linkedin-profile-url]`
+-   GitHub: `https://github.com/byluca`
+-   LinkedIn: `https://www.linkedin.com/in/gianlucalascaro/`
 
 ---
 

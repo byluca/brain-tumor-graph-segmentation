@@ -1,6 +1,5 @@
 # Explainable GNNs for Brain Tumor Segmentation
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the source code, notebooks, and findings from the thesis "Explainability of GNNs for Brain Tumor Segmentation: A Comparative Analysis of Methods and Metrics." This project explores the use of Graph Neural Networks (GNNs) as an accurate and interpretable tool for segmenting brain tumors from multi-modal MRI scans.
 
@@ -189,30 +188,4 @@ The final notebook focuses on model evaluation and generating explainable insigh
 
 ---
 
-## How to Cite
 
-If you use this code or its results in your research, please cite the original thesis:
-
-```bibtex
-@mastersthesis{Lascaro2024GNN,
-  author       = {Gianluca Lascaro},
-  title        = {Spiegabilit{\`a} delle GNN nella Segmentazione dei Tumori Cerebrali: Un'Analisi Comparativa di Metodi e Metriche},
-  school       = {Universit{\`a} degli Studi di Bari Aldo Moro},
-  year         = {2024},
-  note         = {Bachelor's Thesis in Computer Science. Supervisor: Prof. Gennaro Vessio; Co-Supervisor: Dr. Valerio Alberto Gaetano}
-}
-```
-
----
-
-## Author
-
-**Gianluca Lascaro**
--   GitHub: `https://github.com/byluca`
--   LinkedIn: `https://www.linkedin.com/in/gianlucalascaro/`
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
